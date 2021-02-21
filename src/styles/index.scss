@@ -1,0 +1,19 @@
+@use 'reset';
+
+@use 'vars';
+
+body {
+
+  font-family: vars.$font;
+  font-weight: vars.$fwLight;
+  background-image: vars.$altColor;
+  color: vars.$mainColor;
+}
+
+/* 
+  // or you can import your own font
+  @font-face {
+    font-family: 'Roboto';
+
+  }
+*/

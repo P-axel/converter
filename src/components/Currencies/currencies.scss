@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+
+.currencies {
+  text-align: left;
+  max-height: 350px;
+  overflow-y: auto;
+
+  .currencies-search {
+    padding: vars.$gutter;
+    margin-top: vars.$gutter;
+    border: none;
+    width: 100%;
+    color: vars.$mainColor;
+    font-size: 1.2em;
+
+    &::placeholder {
+      color: vars.$altColor;
+    }
+  }
+
+  .currency {
+    border-top: 1px solid vars.$altColor;
+    padding: vars.$gutter;
+    font-weight: vars.$fwMedium;
+    cursor: pointer;
+
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+    transition: background-color vars.$transitionSlow;
+
+    &:hover {
+      background-color: vars.$altColor;
+      transition: background-color vars.$transitionFast;
+    }
+  }
+}

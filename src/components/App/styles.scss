@@ -1,0 +1,10 @@
+@use 'src/styles/vars';
+
+.app {
+  width: 30rem;
+  margin: 1rem auto;
+  text-align: center;
+  background-image: linear-gradient(120deg, #244b49 0%, #8fd3f4 100%);
+  border-radius: 20px;
+
+}
