@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 import './header.scss';
 
-/* Conseil : placer sur l'élément de plus haut niveau de chaque composant
-une classe avec le nom du composant en minuscules */
+
 
 const Header = ({ baseAmount, setBaseAmount }) => (
   <header className="header">
@@ -14,10 +13,7 @@ const Header = ({ baseAmount, setBaseAmount }) => (
       className="header-input"
       value={baseAmount}
       onChange={(event) => {
-        // console.log(event.target.value);
 
-        // event.target.value est forcément un string, mais ici on veut un nombre
-        // pour pouvoir faire des calculs => parseFloat
         setBaseAmount(parseFloat(event.target.value));
       }}
     />
@@ -27,8 +23,7 @@ const Header = ({ baseAmount, setBaseAmount }) => (
 
 Header.propTypes = {
   baseAmount: PropTypes.number.isRequired,
-  // pour mettre à jour la valeur dans le state de App
-  // 1 paramètre : nouvelle valeur
+
   setBaseAmount: PropTypes.func.isRequired,
 };
 
